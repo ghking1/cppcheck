@@ -61,6 +61,7 @@ install:
   - IF "%platform%"=="x64" SET p=x64
   - curl -fsSL https://github.com/Z3Prover/z3/releases/download/z3-4.8.7/z3-4.8.7-%p%-win.zip -o z3-4.8.7-win.zip
   - 7z x z3-4.8.7-win.zip -oexternals\z3 -r -y
+  - dir externals\z3
 
 build_script:
   - ECHO Building %configuration% %platform% with MSVC %VisualStudioVersion% using %PlatformToolset% PlatformToolset
